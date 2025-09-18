@@ -35,7 +35,6 @@ public class S3Service {
 
         s3Client.putObject(request, RequestBody.fromBytes(file.getBytes()));
 
-        // Construct S3 URL manually using injected region
         return "https://" + bucketName + ".s3." + region + ".amazonaws.com/" + keyName;
     }
 }
